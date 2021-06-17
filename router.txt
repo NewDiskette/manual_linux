@@ -1,0 +1,72 @@
+Поиск устройств в сети с помощью командной строки Linux
+Установите nmap
+nmap — одна из самых популярных утилит для сканирования
+ сети в Linux. Для того, чтобы установить nmap в Ubuntu
+ (или других дистрибутивах Linux на базе Debian),
+ выполните следующую команду:
+
+# sudo apt-get install nmap
+
+Эта утилита должна быть доступна в официальных
+ репозиториях всех остальных дистрибутивов.
+
+Узнайте диапазон адресов сети
+Теперь нам нужно узнать диапазон IP-адресов в сети.
+ Это можно сделать с помощью команды ifconfig.
+ В результатах нужно найти фрагмент, начинающийся
+ с wl, если вы подключены к сети по Wi-fi
+ или e, если используете кабельное соединение Ethernet.
+
+# ifconfig
+
+wlp3s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
+inet 192.168.1.69 netmask 255.255.255.0 broadcast 192.168.1.255
+inet6 fe80::2847:8e90:ef28:3d12 prefixlen 64 scopeid 0x20<link>
+ether 3c:95:09:1a:fe:c3 txqueuelen 1000 (Ethernet)
+RX packets 10871731 bytes 15494573470 (15.4 GB)
+RX errors 0 dropped 0 overruns 0 frame 0
+TX packets 5460677 bytes 596624992 (596.6 MB)
+TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+
+Нужная нам информация находится во второй строке.
+Как видно, мой локальный IP-адрес 192.168.1.69,
+а маска подсети 255.255.255.0, что означает,
+что в локальной сети адреса будут отличаться
+ от 192.168.1.0 до 192.168.1.255.
+
+Просканируйте устройства, подключенные к сети
+Для получения более точной информации лучше выполнять
+ сканирование от имени администартора.
+ Используйте команду nmap следующим образом:
+
+# sudo nmap -sn 192.168.1.0/24
+
+# sudo nmap -sn 192.168.2.0/24  # для 2-го роутера 
+
+192.168.1.1 ip address 1-st router
+192.168.1.6 ip address 2-st router
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-11-21 22:32 MSK
+Nmap scan report for router.asus.com (192.168.1.1)
+Host is up (0.0020s latency).
+MAC Address: 18:31:BF:3E:AE:50 (Unknown)
+Nmap scan report for GoUbuntu-desktop (192.168.1.96)
+Host is up (0.089s latency).
+MAC Address: C0:25:E9:2A:06:47 (Tp-link Technologies)
+Nmap scan report for Redmi5Plus-Redmi (192.168.1.172)
+Host is up (0.19s latency).
+MAC Address: 20:47:DA:D9:B8:60 (Unknown)
+Nmap scan report for Redmi5A-Redmi (192.168.1.250)
+Host is up (0.13s latency).
+MAC Address: D8:63:75:B1:C6:57 (Unknown)
+Nmap scan report for Acer-X541UA (192.168.1.69)
+Host is up.
+Nmap done: 256 IP addresses (5 hosts up) scanned in 23.81 seconds
+
+Как видно, в сети работает 5 устройств, одно — роутер,
+ два компьютера и два телефона.
+ Регулярно проверяйте вашу беспроводную сеть,
+ это может обезопасить вас от многих проблем!
+
+
+

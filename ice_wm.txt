@@ -1,0 +1,17 @@
+# cd ~/.icewm # конфиг. файлы
+# http://download.xskernel.org/howto/icewm/icewm.html # про icewm
+
+alt + tab   # выбор окна
+alt + f12   # свернуть окно
+alt + f11   # убрать/добавить поля
+alt + f4    # закрыть програму
+alt + space # меню
+alt + f12   # скрутить 
+
+ctrl + alt + ~      # окно в центре
+ctrl + alt + 9      # во весь экран
+ctrl + alt + 0      # закрыть программу
+ctrl + alt + (1-8)  # разные режимы окна
+ctrl + alt + upPage # выбор вкладки
+
+shift + esc # меню

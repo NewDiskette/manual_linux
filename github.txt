@@ -1,0 +1,34 @@
+# git --vesion
+# sudo apt install git
+# git help
+# git init
+# cd .git
+# ls
+# cd ..
+# git status
+# git add
+# git rm --cached
+# git add .
+# git commit -m "first commit"
+# file .gitignore
+# git branch
+# git branch test     # add branch test
+# git branch -D test  # delete branch test
+# git checkout test   # switch to branch test
+# git checkout -b new # switch to a new branch 'new'
+# git merge test
+# git config --global user.name
+# git config --global user.name ""
+# git config --global user.email
+# git config --global user.email ""
+# git remote add origin https://github.com/newdiskette/git_course.git
+# git push -u origin master
+# git push
+#  cd new_git_progect/
+# git clone https://github.com/newdiskette/git_course.git
+# git pull
+# git diff # посмотреть изменения
+# git commit -am "my second commit" # сразу добавляет изменения в commit
+# git log # history of commits
+
+# git push -f origin master # если есть проблемы

@@ -1,0 +1,47 @@
+https://xakep.ru/2018/02/28/android-and-linux/
+
+Достаточно активировать ADB на смартфоне 
+(Настройки → Для разработчиков → Отладка по USB) 
+и установить пакет с утилитой adb в систему:
+
+         # sudo apt-get install adb
+         
+Далее необходимо подключить смартфон к компу 
+и начать отдавать команды.
+
+Получение списка подключенных устройств:
+
+           # adb devices
+
+Установка на подключенное устройство APK:
+
+          # adb install file.apk
+
+Перемещение файла на устройство:
+
+          # adb push файл /sdcard/
+
+Скачивание файла с устройства:
+
+# adb pull /sdcard/DCIM/Camera/photo.jpg photo.jpg         
+
+Сделать скриншот и скачать его на комп:
+
+       $ adb shell screencap /sdcard/screenshot.png
+       $ adb pull /sdcard/screenshot.png
+       $ adb shell rm /sdcard/screenshot.png
+
+Нажатие кнопки Power:
+
+       $ adb shell input keyevent 26
+       
+Ну и конечно же, ADB можно использовать для получения 
+доступа к командной строке смартфона:
+
+        $ adb shell
+
+Простой способ скачать файлы на комп (обратная синхронизация):
+
+$ adb-sync --reverse /sdcard/Download/ ~/Downloads
+
+    # adb-sync --reverse /sdcard/DCIM/Camera/video ~/xiaomi/video

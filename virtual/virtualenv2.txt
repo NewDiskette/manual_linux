@@ -1,0 +1,9 @@
+			# виртуальная машина
+# sudo apt install virtualenv # установить виртуальную машину
+# pip3 install virtualenv # второй способ
+# virtualenv my_env # создать виртуальную среду в папке my_env  
+# source my_env/bin/activate # активация виртуальной среды
+# pip3 install Django==2.0.5 # установка нужной версии
+# deactivate # выйти из виртуальной среды
+
+

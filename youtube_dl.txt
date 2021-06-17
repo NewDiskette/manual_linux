@@ -1,0 +1,25 @@
+# https://qastack.ru/ubuntu/486297/how-to-select-video-quality-from-youtube-dl
+
+Используйте следующие флаги для автоматической загрузки лучших 
+аудио и видео треков, которые доступны в виде одного файла:
+
+# youtube-dl -f best http:... # скачать видео
+
+# youtube-dl -f best http:... # скачать плейлист с 1 файла
+
+# youtube-dl -f best --playlist-start 2 http:... 
+# скачать плейлист с 2 файла
+
+
+# youtube-dl http:... # скачать видео
+# youtube-dl --playlist-start 1 http:... # скачать плейлист с 1 файла
+
+Чтобы выбрать качество видео , сначала используйте -F 
+опцию для перечисления доступных форматов:
+
+youtube-dl -F http:...
+
+Наилучшее качество - 22, поэтому используйте -f 22 
+вместо -F :
+
+youtube-dl -f 22 http:...

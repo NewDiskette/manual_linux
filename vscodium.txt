@@ -1,0 +1,3 @@
+https://vscodium.com/#install
+
+codium && exit

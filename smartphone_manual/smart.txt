@@ -1,0 +1,40 @@
+# Ставим go-mtpfs 
+# Установка данного приложения до боли однообразна, открываем консоль
+ и вводим команды по очереди :
+
+# sudo apt install software-properties-common # если есть ошибка
+# sudo add-apt-repository ppa:webupd8team/unstable
+# sudo apt-get update
+# sudo apt-get install go-mtpfs
+
+# После чего советую так же установить специальный лаунчер
+ для монтирования Android устройств.
+
+# sudo apt-get install go-mtpfs-unity
+
+# Как подключить Android 4.0+ к Ubuntu
+ После того как мы установили go-mtpfs, для уверености что все
+ установилось корректно в консоли набираем :
+ 
+# go-mtpfs
+
+# Увидите что то вроде этого :
+# darelvc@Darelvc:~$ go-mtpfs 2013/02/04 17:15:34
+# Usage: go-mtpfs [options] MOUNT-POINT 
+# От сюда можно увидеть что данное устройство установлено корректно.
+ Теперь что бы при монтировать наш Android устройство подключаем его
+ к ПК через наш USB кабель и в консоли прописываем: 
+ 
+# go-mtpfs /media/MyAndroid
+
+# Как можно увидеть : Android device detected, assigning default
+ bug flags 2013/02/04 17:16:34 storage ID 131073: SD-карта 2013/02/04
+ 17:16:34 storage ID 65537: USB-накопитель
+ Наше устройство опознано и корректно подключилось.
+ 
+# Для того чтобы извлечь данное устройства также в консоли набираем:
+
+# fusermount -u /media/MyAndroid
+
+# Как всегда в заключение видео инструкция (на английском):
+ {youtube}6pelKv939N8&feature{/youtube} http://variatech.ru

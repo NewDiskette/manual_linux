@@ -1,0 +1,17 @@
+https://timeweb.com/ru/community/articles/kak-ustanovit-stek-lamp-na-ubuntu-20-04
+
+https://otvet.mail.ru/question/217089927 # mysql
+
+lamp:
+linux
+apache2
+mysql-common
+php
+
+# ip address 
+# hostname -I
+
+127.0.0.1 ip 
+
+http://127.0.0.1/index.html
+

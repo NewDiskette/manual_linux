@@ -1,0 +1,13 @@
+# vscode
+# chromium & exit
+
+# cd ~/.icewm # конфиг. файлы
+# http://download.xskernel.org/howto/icewm/icewm.html # про icewm
+
+# sudo chmod +x file.py # сделать файл исполняемым
+# python3 file.py # исполнить файл
+
+
+# sudo aptitude -u
+консольный оконный инструмент управления пакетами 
+- со списком пакетов и поиском по этому списку.
